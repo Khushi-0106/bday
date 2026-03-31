@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Poppins:wght@300;400;500&display=swap');
+
+body {
+    margin: 0;
+    background: linear-gradient(to bottom, #fff0f5, #ffe4ec);
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+p, span {
+    text-align: center;
+}
+
+/* pages */
+.page {
+    display: none;
+    padding: 60px;
+}
+
+.page.active {
+    display: block;
+}
+
+/* 🌸 FIRST PAGE SPECIAL STYLING */
+.first-page {
+    
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width:100%;
+    background: linear-gradient(to bottom, #f8d7da, #fce4ec);
+    text-align: center;
+}
+
+/* text */
+h1, h2 {
+    color: #444;
+}
+
+.first-page h1 {
+    font-size: 3.8rem;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 1px;
+    animation: fadeIn 2s ease-in-out;
+}
+.last-page h1 {
+    font-size: 3.8rem;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 1px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.caption {
+    margin-top: 20px;
+    font-size: 15px;
+    color: #666;
+}
+
+/* pinterest gallery */
+.pinterest-gallery {
+    column-count: 4;
+    column-gap: 10px;
+}
+
+.pinterest-gallery img {
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.pinterest-gallery img:hover {
+    transform: scale(1.03);
+}
+
+/* friends */
+.friends-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.friend-card {
+    text-align: center;
+}
+
+.friend-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.friend-card p {
+    font-size: 14px;
+}
+
+.friend-card span {
+    font-size: 12px;
+    color: #777;
+}
+
+/* nav buttons */
+.nav {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+button {
+    background: #ffc0cb;
+    border: none;
+    padding: 10px 18px;
+    margin: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #f8a5c2;
+    transform: scale(1.05);
+}
+
+/* floating hearts */
+.hearts span {
+    position: fixed;
+    bottom: -50px;
+    animation: float 6s infinite;
+    font-size: 20px;
+}
+
+.hearts span:nth-child(1){ left:10%; animation-delay:0s; }
+.hearts span:nth-child(2){ left:30%; animation-delay:2s; }
+.hearts span:nth-child(3){ left:50%; animation-delay:4s; }
+.hearts span:nth-child(4){ left:70%; animation-delay:1s; }
+.hearts span:nth-child(5){ left:90%; animation-delay:3s; }
+.last-page {
+    
+    display: flex !important;
+    font-family: 'Poppins', sans-serif;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #f8d7da, #fce4ec);
+    text-align: center;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); opacity:1; }
+    100% { transform: translateY(-800px); opacity:0; }
+}
+
+/* ✨ smooth fade animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
